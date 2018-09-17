@@ -1,0 +1,32 @@
+<div draggable="true" class="p-3" ngClass="{{dragAreaClass}}">
+    <div class="text-center upload-area" (click)="file.click()">
+        <p class="mt-2 text-light">Click to browse</p>
+        <p class="mt-2 text-light">Or Drag & Drop to upload your files</p>
+        <input type="file" accept="image/*" #file [multiple]="(maxFiles > 1)" (change)="onFileChange($event)" style="display:none" />
+    </div>
+</div>
+<div class="text-center my-3">
+    <button type="button" [disabled]="!localUrl.length || loading" class="btn btn-warning text-light mb-3 py-3 px-5" (click)="saveFiles()">
+          UPLOAD
+  </button>
+    <p *ngIf="loading">Uploading...</p>
+</div>
+<div class="error py-4" *ngIf="errors.length > 0">
+    <ul>
+        <li *ngFor="let err of errors">{{err}}</li>
+    </ul>
+</div>
+<div class="row p-0 mx-0 my-2 preview" *ngIf="localUrl.length">
+    <div class="col-12">
+        <h5>Selected Files: </h5>
+    </div>
+    <div class="col-3 mt-3" *ngFor="let item of localUrl">
+        <button type="button" class="btn removeImg" aria-label="Close" (click)="removeImage(item)">
+          <span aria-hidden="true">&times;</span>
+      </button>
+        <img [src]="item.url" alt="{{item.name}}" class="img-thumbnail">
+        <div class="caption py-2">
+            <p>{{item.name}}</p>
+        </div>
+    </div>
+</div>
