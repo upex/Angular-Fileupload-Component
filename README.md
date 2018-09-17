@@ -38,9 +38,12 @@ Please open an issue if
 you have any suggestion to improve this project
 you noticed any problem or error
 
-To do
+## To do
+
 More tests
-Running frontend unit tests
+
+##Running frontend unit tests
+
 Run ng test to execute the unit tests via Karma.
 
 ## Running frontend end-to-end tests
