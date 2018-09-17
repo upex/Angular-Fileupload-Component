@@ -1,3 +1,5 @@
+![screen shot 2018-09-18 at 1 14 23 am](https://user-images.githubusercontent.com/19906579/45649398-d3990500-bae8-11e8-8dcb-af34deaa4d15.png)
+
 ## Environment setup
 In order to upload files into Digitalocean spaces, create a `.env` file in the project root directory with the following environment variables:
 ##### SPACES_ACCESS_KEY_ID = < SPACES ACCESS KEY ID >
