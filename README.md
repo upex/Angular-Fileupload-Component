@@ -1,3 +1,11 @@
+## Environment setup
+In order to upload files into Digitalocean spaces, create a `.env` file in the project root directory with the following environment variables:
+##### SPACES_ACCESS_KEY_ID = < SPACES ACCESS KEY ID >
+##### SPACES_SECRET_ACCESS_KEY = < SPACES SECRET ACCESS KEY >
+##### END_POINT = < SPACES END POINT>
+##### BUCKET_NAME = < SPACES BUCKET NAME>
+
+
 ## Angular-Fileupload-Component
 An Angular component to upload files anywhere.
 
